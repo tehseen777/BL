@@ -23,10 +23,10 @@ export default function Steps() {
     "We Source, Train, And Assemble Your New Team In As Little As 2 Weeks. Once You Go Live, We Continuously Work To Ensure You Hit KPIs."
 
   return (
-    <div className="bg-black text-white h-screen flex flex-col justify-between  py-10 px-20">
+    <div className="bg-black text-white h-screen flex flex-col justify-between  py-10 px-36">
       <div >
-        <h1 className="text-4xl lg:text-5xl font-bold mb-4">Launch In 5 Easy Steps</h1>
-        <p className=" mb-8">
+        <h1 className="text-4xl lg:text-5xl font-semibold tracking-wide mb-4 transform scale-y-110 font-sans">Launch In 5 Easy Steps</h1>
+        <p className=" mb-8 font-sans font-extralight tracking-wide">
           We Source, Train, And Assemble Your New Team In As Little As 2 Weeks.
           <br />
           Once You Go Live, We Continuously Work To Ensure You Hit KPIs.
@@ -42,7 +42,7 @@ export default function Steps() {
               alt="Team members discussing work in an office"
               width={1000}
               height={1200}
-              className="w-auto h-[400px] object-cover"
+              className="w-auto h-[420px] object-cover"
             />
           </div>
 
@@ -58,12 +58,12 @@ export default function Steps() {
                   onClick={() => toggleStep(index)}
                   className="flex justify-between items-center w-full p-4 text-left"
                 >
-                  <span>{step}</span>
+                  <span className="font-sans  tracking-wide">{step}</span>
                   <ChevronDown
                     className={`transition-transform duration-200 ${openStep === index ? "transform rotate-180" : ""}`}
                   />
                 </button>
-                {openStep === index && <div className="p-3 pt-0 text-sm">{stepContent}</div>}
+                {openStep === index && <div className="px-3 pb-3 text-sm font-sans font-extralight tracking-wide">{stepContent}</div>}
               </div>
             ))}
           </div>

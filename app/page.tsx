@@ -9,6 +9,8 @@ import Steps from './components/steps'
 import Workflow from './components/workflow'
 import Reviews from './components/reviews'
 import WhatsNew from './components/whats_new'
+import Footer from './components/footer'
+import Newsletter from './components/newsletter'
 const page = () => {
   return (
     <div>
@@ -39,7 +41,11 @@ const page = () => {
           <section>
             <WhatsNew />
           </section>
+          <section>
+            <Newsletter />
+          </section>
       </main>
+      <Footer />
     </div>
   )
 }
