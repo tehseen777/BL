@@ -1,54 +1,79 @@
-'use client';
+import Image from "next/image"
 
-import Image from 'next/image';
-import React from 'react';
-
-const images = [
-  '/new-1.png',
-  '/new-2.png',
-  '/new-3.png',
-  '/new-4.png',
-];
-
-const WhatsNew = () => {
+export default function WhatsNew() {
   return (
-    <section className="bg-black  text-white py-16 px-4">
-      <div className="text-center max-w-3xl mx-auto mb-12">
-        <h2 className="text-3xl md:text-5xl font-bold leading-snug mb-4">
-          See What’s New And What’s Next.
-        </h2>
-        <p className="text-gray-400 text-sm md:text-base">
-          Founded in 2018, We Started As A Small Team With Big Dreams. We Recognized The Need For Innovative And Effective Solutions That Could Help Businesses Thrive In A Rapidly Evolving Digital World. With A Deep Understanding Of The Power Of Creativity And Technology.
-        </p>
-        <button className="mt-6 px-6 py-2 rounded-full bg-gradient-to-r from-[#866935] to-[#CEA251] text-black font-semibold transition hover:opacity-90">
-          Speak To An Expert
-        </button>
-      </div>
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 py-16">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="flex flex-col gap-y-4 -mb-24">
+        <h1 className="text-6xl max-w-3xl mx-auto font-sans leading-18 ">See What’s New And What’s Next <span className=" font-serif -mx-2 text-5xl">.</span></h1>
 
-      <div className="flex justify-center gap-6 flex-wrap">
-        {images.map((src, index) => (
-          <div key={index} className="overflow-hidden rounded-[40px] w-[200px] md:w-[250px] lg:w-[280px] h-[320px] relative">
+        <p className="text-sm font-sans font-extralight tracking-wider capitalize max-w-[520px] mx-auto leading-relaxed">
+          Founded In 2018, We Started As A Small Team With Big Dreams. We Recognized The Need For Innovative And
+          Effective Solutions That Could Help Businesses Thrive In A Rapidly Evolving Digital World, With A Deep
+          Understanding Of The Power Of Creativity And Technology.
+        </p>
+
+        <div className=" flex justify-center items-center">   <button className=' text-black cursor-pointer text-sm px-10 py-3 rounded-full capitalize' style={{
+                backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
+              }}>
+                speak to an expert
+            </button>
+        </div>
+        </div>
+        <div className="flex gap-4 mb-8 justify-center">
+          {/* First image - larger/taller */}
+          <div className="w-1/4 overflow-hidden  h-full">
             <Image
-              src={src}
-              alt={`new-${index}`}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-[40px]"
+              src="/new-1.png"
+              alt="Business meeting with presentation"
+              width={240}
+              height={400}
+              className="w-full h-full object-cover"
             />
           </div>
-        ))}
-      </div>
 
-      {/* Slider Dots (static for visual effect) */}
-      <div className="flex justify-center mt-8 gap-2">
-        <span className="w-3 h-1.5 rounded-full bg-white opacity-30"></span>
-        <span className="w-3 h-1.5 rounded-full bg-white opacity-30"></span>
-        <span className="w-6 h-1.5 rounded-full bg-gradient-to-r from-[#866935] to-[#CEA251]"></span>
-        <span className="w-3 h-1.5 rounded-full bg-white opacity-30"></span>
-        <span className="w-3 h-1.5 rounded-full bg-white opacity-30"></span>
-      </div>
-    </section>
-  );
-};
+          {/* Second image - smaller */}
+          <div className="w-1/4 overflow-hidden h-full self-end">
+            <Image
+              src="/new-2.png"
+              alt="People discussing in modern office"
+              width={240}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-export default WhatsNew;
+          {/* Third image - smaller */}
+          <div className="w-1/4 overflow-hidden h-full self-end">
+            <Image
+              src="/new-3.png"
+              alt="Person working on laptop with digital overlay"
+              width={240}
+              height={300}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Fourth image - larger/taller */}
+          <div className="w-1/4 overflow-hidden h-full">
+            <Image
+              src="/new-4.png"
+              alt="Modern office workspace"
+              width={240}
+              height={400}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <div className="flex justify-center space-x-2">
+          <div className="w-8 h-1 bg-blue-500 rounded-full"></div>
+          <div className="w-8 h-1 bg-gray-600 rounded-full"></div>
+          <div className="w-8 h-1 bg-yellow-500 rounded-full"></div>
+          <div className="w-8 h-1 bg-gray-600 rounded-full"></div>
+          <div className="w-8 h-1 bg-gray-600 rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  )
+}

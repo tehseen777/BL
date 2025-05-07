@@ -3,7 +3,7 @@ import { FaInstagram, FaTwitter, FaFacebookF, FaLinkedinIn } from 'react-icons/f
 
 const Footer = () => {
     return (
-        <div className='w-full bg-black text-white px-6 lg:px-28 pt-20'>
+        <div className='w-full bg-black text-white px-6 lg:px-20 pt-20'>
 
             {/* Footer Main Content */}
             <div className='grid grid-cols-1 lg:grid-cols-5 gap-12 pb-10 text-sm'>
@@ -11,7 +11,7 @@ const Footer = () => {
                 {/* Brand (Span 2 Columns on Large Screens) */}
                 <div className='lg:col-span-2'>
                     <h3 className='bg-clip-text bg-gradient-to-r from-[#866935] to-[#CEA251] text-transparent font-bold text-xl mb-2'>BUSINESS LOUNGE</h3>
-                    <p className='text-gray-400 mb-4 font-sans max-w-[300px] font-extralight tracking-widest text-[12px]'>
+                    <p className='text-gray-300 mb-4 font-sans max-w-[300px] font-extralight tracking-widest text-[12px]'>
                         It has survived not only five centuries, but also the leap into electronic.
                     </p>
 
@@ -34,7 +34,7 @@ const Footer = () => {
                 {/* Quick Links */}
                 <div>
                     <h4 className='text-white font-semibold text-lg tracking-wide mb-4 font-sans'>Quick Links</h4>
-                    <ul className='space-y-2 text-gray-400 text-[12px] font-sans font-extralight tracking-wide'>
+                    <ul className='space-y-2 text-gray-300 text-[12px] font-sans font-extralight tracking-wide'>
                         <li>Home</li>
                         <li>About</li>
                         <li>Products</li>
@@ -44,7 +44,7 @@ const Footer = () => {
                 {/* Find Us */}
                 <div>
                     <h4 className='text-white font-semibold text-lg tracking-wide mb-4 font-sans'>Find Us</h4>
-                    <p className='text-gray-400 font-sans leading-7 text-[12px] font-extralight tracking-wide'>
+                    <p className='text-gray-300 font-sans leading-7 text-[12px] font-extralight tracking-wide'>
                         50 Brooklyn Golden Street, <br />
                         New York, United States of America
                     </p>
@@ -54,15 +54,15 @@ const Footer = () => {
                 <div>
                     <h4 className='text-white font-semibold text-lg tracking-wide mb-4 font-sans'>Contact</h4>
                     <div className='flex flex-col gap-y-2'>
-                    <p className='text-gray-400 text-[12px] font-sans font-extralight tracking-wide'>Address Lorem Ipsum simply</p>
-                    <p className='text-gray-400 text-[12px] font-sans font-extralight tracking-wide'>812-635-0485</p>
-                    <p className='text-gray-400 text-[12px] font-sans font-extralight tracking-wide'>info@ceobfresh@gmail.com</p>
+                    <p className='text-gray-300 text-[12px] font-sans font-extralight tracking-wide'>Address Lorem Ipsum simply</p>
+                    <p className='text-gray-300 text-[12px] font-sans font-extralight tracking-wide'>812-635-0485</p>
+                    <p className='text-gray-300 text-[12px] font-sans font-extralight tracking-wide'>info@ceobfresh@gmail.com</p>
                 </div>
                 </div>
             </div>
 
             {/* Bottom Footer */}
-            <div className='border-t border-gray-800 py-6 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center'>
+            <div className='border-t py-6 text-sm text-gray-300 flex flex-col md:flex-row justify-between items-center'>
                 <p className='font-sans font-extralight tracking-wide'>© 2023 <span className='text-white'>BusinessLounge</span>... All right reserved.</p>
                 <p className='mt-2 md:mt-0 font-sans font-extralight tracking-wide'>Privacy Policy | Terms of Service</p>
             </div>

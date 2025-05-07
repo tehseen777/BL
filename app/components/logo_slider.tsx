@@ -13,7 +13,11 @@ const logos = [
   
 ]
 
-const Logo_slider = ({background_color}:{background_color:string}) => {
+
+const Logo_slider = ({ background_color }: { background_color: string }) => {
+  // Determine the filter to apply based on the background color
+  const blendMode = background_color === '#000000' ? 'color' : 'normal';  // Apply color b/ Invert for blue background, no change for red background
+  
   return (
     <div className='py-4 max-w-screen'>
       <div className='slider-container' style={{ backgroundColor: background_color }}>
@@ -21,7 +25,17 @@ const Logo_slider = ({background_color}:{background_color:string}) => {
           {/* Logos repeated twice for seamless loop */}
           {[...logos, ...logos].map((src, i) => (
             <div className="slider-item" key={i}>
-              <Image src={src} alt={`logo_${i}`} width={150} height={150} className='bg-transparent lg:w-[180px]  w-[70px] h-full' />
+              <Image
+                src={src}
+                alt={`logo_${i}`}
+                width={150}
+                height={150}
+                className='text-yellow-500 lg:w-[180px] w-[70px] h-full'
+                style={{
+                  mixBlendMode: blendMode,  // Apply blend mode to adjust logo color
+                  filter: background_color === '#000000' ? 'invert(1)  sepia(1) saturate(3) hue-rotate(0deg)' : 'none' // Invert for black background
+                }}
+              />
             </div>
           ))}
         </div>

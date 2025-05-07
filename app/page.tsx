@@ -19,7 +19,7 @@ const page = () => {
         <section>
           <Hero_section />
         </section>
-        <Logo_slider background_color="#110E03" />
+        <Logo_slider background_color="#110E03"  />
         <section>
           <Perfomance />
         </section>

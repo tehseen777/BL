@@ -24,7 +24,7 @@ const Workflow = () => {
 <div className='relative z-10 flex flex-col gap-y-4 justify-center items-center '>
     <h2 className='text-7xl font-sans text-center capitalize leading-22'>But I must explain to you how <br />all this mistaken idea</h2>
     <p className='text-lg font-sans text-center font-extralight tracking-wider max-w-[800px]'>From expected surges and urgent projects to unexpected demands, we’ve got your back. Access elite talent instantly, scale down seamlessly.</p>
-    <button className=' text-black text-sm px-10 py-3 rounded-full capitalize' style={{
+    <button className=' text-black text-sm px-10 py-3 cursor-pointer rounded-full capitalize' style={{
                 backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
               }}>
                 explore more

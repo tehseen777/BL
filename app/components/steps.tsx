@@ -23,8 +23,8 @@ export default function Steps() {
     "We Source, Train, And Assemble Your New Team In As Little As 2 Weeks. Once You Go Live, We Continuously Work To Ensure You Hit KPIs."
 
   return (
-    <div className="bg-black text-white h-screen flex flex-col justify-between  py-10 px-36">
-      <div >
+    <div className="bg-black text-white h-screen flex flex-col justify-center   py-10 px-36">
+      <div className="flex flex-col gap-y-2">
         <h1 className="text-4xl lg:text-5xl font-semibold tracking-wide mb-4 transform scale-y-110 font-sans">Launch In 5 Easy Steps</h1>
         <p className=" mb-8 font-sans font-extralight tracking-wide">
           We Source, Train, And Assemble Your New Team In As Little As 2 Weeks.
@@ -46,12 +46,12 @@ export default function Steps() {
             />
           </div>
 
-          <div className="md:w-1/2 space-y-3">
+          <div className="md:w-2/3 space-y-3">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`border text-sm  rounded-lg overflow-hidden ${
-                  openStep === index ? "border-yellow-600 bg-[rgba(255,200,0,0.1)]" : "border-gray-700"
+                className={`border-[0.5px] text-sm  rounded-lg overflow-hidden ${
+                  openStep === index ? 'border-[#D8BD62] bg-[#1E190B]  shadow-[0px_4px_4px_5px_rgba(216,189,98,0.25)]' : "border-[#D8BD62]"
                 }`}
               >
                 <button
@@ -60,7 +60,7 @@ export default function Steps() {
                 >
                   <span className="font-sans  tracking-wide">{step}</span>
                   <ChevronDown
-                    className={`transition-transform duration-200 ${openStep === index ? "transform rotate-180" : ""}`}
+                    className={`transition-transform cursor-pointer duration-200 ${openStep === index ? "transform rotate-180" : ""}`}
                   />
                 </button>
                 {openStep === index && <div className="px-3 pb-3 text-sm font-sans font-extralight tracking-wide">{stepContent}</div>}

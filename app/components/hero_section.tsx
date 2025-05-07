@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const Hero_section = () => {
   return (
-    <div className='relative h-screen flex px-20 justify-center gap-x-10 items-center overflow-hidden'>
+    <div className='relative h-screen flex px-20 justify-center gap-x-16 items-center pt-20 overflow-hidden'>
 
         {/* top left png */}
      <div
@@ -21,15 +21,15 @@ const Hero_section = () => {
       ></div>
          
          <div>
-            <Image src="/hero_image.png" alt="hero_image" width={1200} height={1000} className='w-[400px] h-auto'/>
+            <Image src="/hero_image.png" alt="hero_image" width={1200} height={1000} className='w-[440px] h-auto'/>
          </div>
 
          <div className=' flex flex-col gap-y-4'>
-            <p className='text-[#CB8E1F] font-sans'>Outsourcing+</p>
-            <h2 className='text-7xl  font-sans'>Built to make <br /> you better.</h2>
-            <p className='text-white max-w-[500px] font-sans font-extralight capitalize tracking-wider'>We’re not traditional outsourcers. We build world-class teams—from customer support to AI data solutions—helping you scale faster and smarter.</p>
+            <p className='text-[#CB8E1F] font-sans tracking-wider'>Outsourcing+</p>
+            <h2 className='text-[80px]  leading-20  font-sans  capitalize'>Built to make <br /> you better <span className='font-serif -mx-4 text-6xl'>.</span></h2>
+            <p className='text-white max-w-[400px] leading-6 font-sans font-extralight text-sm capitalize tracking-wider'>We’re not traditional outsourcers. We build world-class teams—from customer support to AI data solutions—helping you scale faster and smarter.</p>
             <div>
-            <button className=' text-black text-sm px-10 py-3 rounded-full capitalize' style={{
+            <button className=' text-black text-sm cursor-pointer px-8 py-2 rounded-full capitalize' style={{
                 backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
               }}>
                 explore more

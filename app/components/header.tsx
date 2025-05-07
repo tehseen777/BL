@@ -11,16 +11,21 @@ const Header = () => {
                 Business <br /> lounge
             </div>
 
-            <div className='flex gap-8 border-b '>
-                <span className='uppercase text-sm'><Link href="/">Solutions</Link></span>
-                <span className='uppercase text-sm'><Link href="/">Industries</Link></span>
-                <span className='uppercase text-sm'><Link href="/">our agents</Link></span>
-                <span className='uppercase text-sm'><Link href="/">pricing company</Link></span>
-                <span className='uppercase text-sm'><Link href="/">resources</Link></span>
-            </div>
+            <div className="relative">
+  <div className="flex gap-8 pb-[3px] tracking-widest">
+    <span className="uppercase text-[12px]"><Link href="/">Solutions</Link></span>
+    <span className="uppercase text-[12px]"><Link href="/">Industries</Link></span>
+    <span className="uppercase text-[12px]"><Link href="/">our agents</Link></span>
+    <span className="uppercase text-[12px]"><Link href="/">pricing company</Link></span>
+    <span className="uppercase text-[12px]"><Link href="/">resources</Link></span>
+  </div>
+
+  {/* Gradient bottom border */}
+<div className="absolute left-0 bottom-0 w-full h-[1px] bg-gradient-to-r from-[#CEA251] to-[#685229]"></div>
+</div>
 
             <div>
-                <button className=' text-black text-sm  px-8 py-3 rounded-full capitalize'  style={{
+                <button className=' text-black text-sm cursor-pointer px-6 py-2 rounded-full capitalize'  style={{
                 backgroundImage: 'linear-gradient(to right, #AD974E, #674C19)',
               }}>get started</button>
             </div>

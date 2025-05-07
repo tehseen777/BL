@@ -18,8 +18,8 @@ backgroundImage: `url('/mountain.png')`,
 <div className='relative z-10 flex flex-col gap-y-10 justify-center items-center '>
 
 
-<h3 className='text-center text-7xl font-sans '>We integrate seamlessly with technology built for scale & customer excellence.</h3>
-<button className=' text-black text-sm text-semibold px-8 py-3 rounded-full capitalize'style={{
+<h3 className='text-center text-7xl font-sans max-w-6xl transform scale-y-105 leading-18  '>We integrate seamlessly with technology built for scale & customer excellence.</h3>
+<button className=' text-black text-sm text-semibold cursor-pointer px-8 py-3 rounded-full capitalize'style={{
                 backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
               }}>
 Build your team
