@@ -2,21 +2,21 @@ import Image from "next/image"
 
 export default function WhatsNew() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 py-16">
+    <div className="lg:h-screen bg-black text-white flex flex-col items-center justify-center px-4 lg:py-16 py-20">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="flex flex-col gap-y-4 -mb-24">
-        <h1 className="text-6xl max-w-3xl mx-auto font-sans leading-18 ">See What’s New And What’s Next <span className=" font-serif -mx-2 text-5xl">.</span></h1>
+        <div className="flex flex-col lg:gap-y-4 gap-y-3 lg:-mb-24 -mb-8">
+        <h1 className="lg:text-6xl text-3xl max-w-3xl mx-auto font-medium font-sans lg:leading-18 leading-10 ">See What’s New And <br className="lg:hidden block" /> What’s Next <span className=" font-serif lg:-mx-2 lg:text-5xl text-3xl">.</span></h1>
 
-        <p className="text-sm font-sans font-extralight tracking-wider capitalize max-w-[520px] mx-auto leading-relaxed">
+        <p className="lg:text-sm text-xs font-sans font-extralight tracking-wider capitalize lg:max-w-[450px] max-w-[300px] mx-auto leading-relaxed">
           Founded In 2018, We Started As A Small Team With Big Dreams. We Recognized The Need For Innovative And
           Effective Solutions That Could Help Businesses Thrive In A Rapidly Evolving Digital World, With A Deep
           Understanding Of The Power Of Creativity And Technology.
         </p>
 
-        <div className=" flex justify-center items-center">   <button className=' text-black cursor-pointer text-sm px-10 py-3 rounded-full capitalize' style={{
+        <div className=" flex justify-center items-center">   <button className='lg:text-sm text-[10px] text-black cursor-pointer lg:px-8 px-4 lg:py-3 py-2 rounded-full capitalize' style={{
                 backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
               }}>
-                speak to an expert
+                explore more
             </button>
         </div>
         </div>

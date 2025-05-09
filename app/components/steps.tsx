@@ -23,12 +23,12 @@ export default function Steps() {
     "We Source, Train, And Assemble Your New Team In As Little As 2 Weeks. Once You Go Live, We Continuously Work To Ensure You Hit KPIs."
 
   return (
-    <div className="bg-black text-white h-screen flex flex-col justify-center   py-10 px-36">
-      <div className="flex flex-col gap-y-2">
-        <h1 className="text-4xl lg:text-5xl font-semibold tracking-wide mb-4 transform scale-y-110 font-sans">Launch In 5 Easy Steps</h1>
-        <p className=" mb-8 font-sans font-extralight tracking-wide">
+    <div className="bg-black text-white h-screen flex flex-col justify-center  gap-y-8 lg:py-10 py-16 lg:px-36 px-6">
+      <div className="flex flex-col gap-y-3">
+        <h1 className="lg:text-4xl text-2xl text-center lg:text-left font-semibold tracking-wide  transform scale-y-110 font-sans">Launch In 5 Easy Steps</h1>
+        <p className=" text-center lg:text-left mb-6 font-sans lg:text-sm text-xs font-extralight tracking-wide">
           We Source, Train, And Assemble Your New Team In As Little As 2 Weeks.
-          <br />
+          <br className="lg:block hidden"/>
           Once You Go Live, We Continuously Work To Ensure You Hit KPIs.
         </p>
 
@@ -36,21 +36,21 @@ export default function Steps() {
       </div>
 
       <div className="flex flex-col lg:flex-row lg:justify-center lg:items-center  gap-x-10">
-          <div className=" rounded-3xl overflow-hidden">
+          <div className=" rounded-3xl overflow-hidden lg:block hidden">
             <Image
               src="/steps-image.png"
               alt="Team members discussing work in an office"
               width={1000}
               height={1200}
-              className="w-auto h-[420px] object-cover"
+              className="w-auto h-[400px] object-cover"
             />
           </div>
 
-          <div className="md:w-2/3 space-y-3">
+          <div className="lg:w-2/3 lg:space-y-3 space-y-4">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`border-[0.5px] text-sm  rounded-lg overflow-hidden ${
+                className={`border-[0.5px] lg:text-sm text-xs  rounded-lg overflow-hidden ${
                   openStep === index ? 'border-[#D8BD62] bg-[#1E190B]  shadow-[0px_4px_4px_5px_rgba(216,189,98,0.25)]' : "border-[#D8BD62]"
                 }`}
               >
@@ -63,7 +63,7 @@ export default function Steps() {
                     className={`transition-transform cursor-pointer duration-200 ${openStep === index ? "transform rotate-180" : ""}`}
                   />
                 </button>
-                {openStep === index && <div className="px-3 pb-3 text-sm font-sans font-extralight tracking-wide">{stepContent}</div>}
+                {openStep === index && <div className="px-4 pb-3  font-sans font-extralight tracking-wide">{stepContent}</div>}
               </div>
             ))}
           </div>

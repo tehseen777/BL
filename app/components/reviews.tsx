@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { GoStarFill } from "react-icons/go";
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -33,7 +33,6 @@ const testimonials = [
     image: '/peoples/hanna.png',
     stars: 5,
     review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-
   },
   {
     name: 'Olivia Brown',
@@ -41,14 +40,28 @@ const testimonials = [
     image: '/peoples/julia.png',
     stars: 5,
     review: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.',
-
   },
 ];
 
-const ITEMS_PER_SLIDE = 3;
-
 const Reviews = () => {
+  const [ITEMS_PER_SLIDE, setITEMS_PER_SLIDE] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screen = window.innerWidth;
+      if (screen < 640) {
+        setITEMS_PER_SLIDE(1); // mobile
+      } else {
+        setITEMS_PER_SLIDE(3);
+      }
+    };
+
+    handleResize(); // Call once to set initial state
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const totalSlides = Math.ceil(testimonials.length / ITEMS_PER_SLIDE);
 
@@ -62,9 +75,9 @@ const Reviews = () => {
   };
 
   return (
-    <section className="bg-black text-white py-16 overflow-hidden">
-      <h2 className="text-3xl lg:text-6xl font-bold text-center mb-12">
-        What Our Clients Say About Us
+    <section className="bg-black lg:h-screen  text-white py-16 overflow-hidden">
+      <h2 className="text-3xl lg:text-6xl lg:font-semibold text-center mb-12">
+        What Our Clients Says <br className='lg:hidden block' /> About Us
       </h2>
 
       <div className="flex justify-center px-4">
@@ -75,14 +88,14 @@ const Reviews = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-8"
+            className="flex flex-wrap justify-center gap-4"
           >
             {getVisibleTestimonials().map((t, idx) => (
               <div
                 key={idx}
-                className="bg-gradient-to-b from-[#292828] to-[#251515] rounded-xl px-8 py-12 text-center max-w-sm flex flex-col items-center shadow-lg"
+                className="bg-gradient-to-b from-[#292828] to-[#251515] rounded-xl lg:px-8 px-4 lg:py-10 py-6 text-center max-w-sm flex flex-col items-center shadow-lg"
               >
-                <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border border-gray-500">
+                <div className="lg:w-22 lg:h-22 w-16 h-16 rounded-full overflow-hidden mb-4 border border-gray-500">
                   <Image
                     src={t.image}
                     alt={t.name}
@@ -91,7 +104,7 @@ const Reviews = () => {
                     className="object-cover w-full h-full"
                   />
                 </div>
-                <h3 className="text-2xl font-sans">{t.name}</h3>
+                <h3 className="text-xl font-sans">{t.name}</h3>
                 <p className="text-sm font-sans text-gray-400 mb-3">{t.role}</p>
                 <div className="flex justify-center gap-x-1 mb-4">
                   {Array(t.stars)
@@ -100,7 +113,7 @@ const Reviews = () => {
                       <GoStarFill key={i} className="text-[#F3AE57] text-xl" />
                     ))}
                 </div>
-                <p className="text-sm text-gray-300">{t.review}</p>
+                <p className="lg:text-sm text-xs font-sans font-light lg:max-w-[280px] max-w-[220px] text-gray-300">{t.review}</p>
               </div>
             ))}
           </motion.div>
@@ -113,7 +126,7 @@ const Reviews = () => {
           <button
             key={i}
             className={`w-3 h-3 rounded-full transition-opacity duration-300 cursor-pointer ${
-              i === currentIndex ? 'bg-white opacity-100' : 'bg-white opacity-40'
+              i === currentIndex ? 'bg-gradient-to-b from-[#D8BD62] to-[#726434] opacity-100' : 'bg-white opacity-40'
             }`}
             onClick={() => handleDotClick(i)}
           />

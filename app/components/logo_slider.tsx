@@ -19,7 +19,7 @@ const Logo_slider = ({ background_color }: { background_color: string }) => {
   const blendMode = background_color === '#000000' ? 'color' : 'normal';  // Apply color b/ Invert for blue background, no change for red background
   
   return (
-    <div className='py-4 max-w-screen'>
+    <div className=' max-w-screen'>
       <div className='slider-container' style={{ backgroundColor: background_color }}>
         <div className="slider-track">
           {/* Logos repeated twice for seamless loop */}
