@@ -52,7 +52,7 @@ export default function MobileMenu( {className}:{className:string}) {
     <>
       <div className={`${className}`} >
         <button onClick={() => setOpen(true)} className="lg:hidden block">
-          <CgMenuRight size={28} className="text-[#C69B4D]"/>
+          <CgMenuRight size={32} className="text-[#C69B4D]"/>
         </button>
       </div>
 

@@ -5,7 +5,7 @@ import MobileMenu from './ui/mobileMenu'
 const Header = () => {
   return (
     <nav className='absolute top-0 left-0 right-0 z-50 flex justify-between items-center lg:p-6 p-3 bg-transparent'>
-      <div className='lg:text-2xl text-xs lg:font-bold font-semibold bg-clip-text text-transparent uppercase'
+      <div className='lg:text-2xl text-sm lg:font-bold font-semibold bg-clip-text text-transparent uppercase'
         style={{
           backgroundImage: 'linear-gradient(to right, #866935, #CEA251)',
         }}>
