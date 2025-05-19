@@ -26,7 +26,7 @@ const Header = () => {
       {/* </div> */}
 
       <div className='lg:flex hidden'>
-        <button className=' text-black text-sm cursor-pointer px-6 py-2 rounded-full capitalize' style={{
+        <button className=' text-black text-sm font-sans font-medium cursor-pointer px-6 py-2 rounded-full capitalize' style={{
           backgroundImage: 'linear-gradient(to right, #AD974E, #674C19)',
         }}>get started</button>
       </div>

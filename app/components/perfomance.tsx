@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import DashboardCard from './dashboard_card'
+import Button from './ui/button'
 // import DashboardCard from './dashboard_card'
 const Perfomance = () => {
 
@@ -34,11 +35,7 @@ const Perfomance = () => {
           <p className='font-sans font-extralight lg:text-sm text-xs capitalize tracking-wider text-center lg:max-w-[700px] max-w-[300px]'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
-          <button className=' text-black cursor-pointer text-sm lg:px-8 px-6 py-2 rounded-full capitalize' style={{
-            backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
-          }}>
-            explore more
-          </button>
+       <Button text="explore more"/>
           </div>
         <DashboardCard className='block lg:hidden' />
         </div>
@@ -63,11 +60,7 @@ const Perfomance = () => {
               Lorem Ipsum is simply dummy text of the printing and typesetting industry make a type specimen book.
             </p>
             <div className='flex'>
-            <button className=' text-black cursor-pointer text-xs px-8 py-2 rounded-full capitalize' style={{
-              backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
-            }}>
-              explore more
-            </button>
+          <Button text='explore more' className='text-xs lg:px-6'/>
             </div>
           </div>
 

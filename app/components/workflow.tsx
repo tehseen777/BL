@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './ui/button'
 
 const Workflow = () => {
   return (
@@ -24,11 +25,7 @@ const Workflow = () => {
       <div className='relative z-10 flex flex-col gap-y-3 justify-center items-center py-20 lg:py-0 '>
         <h2 className='lg:text-6xl text-3xl font-sans font-medium text-center capitalize lg:leading-20 leading-10'>But I must explain to <br className='block lg:hidden' /> you how <br className='lg:block hidden'/>all this <br className='lg:hidden block'/>mistaken idea</h2>
         <p className=' font-sans text-center font-extralight tracking-wider text-xs lg:text-base lg:max-w-[700px] max-w-[300px]'>From expected surges and urgent projects to unexpected demands, we’ve got your back. Access elite talent instantly, scale down seamlessly.</p>
-        <button className=' text-black lg:text-sm text-xs lg:px-10 px-4  lg:py-3 py-2 cursor-pointer rounded-full capitalize' style={{
-          backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
-        }}>
-          speak to an expert
-        </button>
+      <Button text="speak to an expert" className='lg:py-3'/>
       </div>
     </div>
   )

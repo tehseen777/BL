@@ -8,10 +8,10 @@ export default function DashboardCard({ className }: { className: string }) {
   return (
 
     <div className={className}>
-      <div className="relative lg:w-2xl w-[330px] bg-black border border-[#D8BD62] lg:shadow-[0px_4px_10px_5px_rgba(216,189,98,0.25)] shadow-[0px_1px_3px_3px_rgba(216,189,98,0.25)] rounded-3xl overflow-hidden lg:px-10 px-4 lg:pt-12 pt-8 pb-6">
+      <div className="relative lg:w-[600px] w-[330px] bg-black border border-[#D8BD62] lg:shadow-[0px_4px_10px_5px_rgba(216,189,98,0.25)] shadow-[0px_1px_3px_3px_rgba(216,189,98,0.25)] rounded-3xl overflow-hidden lg:px-10 px-4 lg:pt-12 pt-8 pb-6">
         {/* Top section with 2 WEEKS */}
-        <div className="absolute top-0 lg:left-25 left-10 right-0 bottom-0">
-          <div className="bg-gradient-to-b from-[#D8BD62] to-[#726434] lg:rounded-[50px] rounded-3xl rounded-t-none rounded-tr-none lg:w-44 w-24 lg:h-30 h-18 flex items-center justify-center">
+        <div className="absolute top-0 lg:left-15 left-10 right-0 bottom-0">
+          <div className="bg-gradient-to-b from-[#D8BD62] to-[#726434] lg:rounded-[50px] rounded-3xl lg:rounded-t-none rounded-t-none lg:w-44 w-24 lg:h-30 h-18 flex items-center justify-center">
             <h1 className="lg:text-2xl text-sm  lg:font-semibold text-white">2 WEEKS</h1>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function DashboardCard({ className }: { className: string }) {
                   style={{ width: `${topScore * 3}%` }}
                 ></div>
               </div>
-              <div className="lg-block hidden">
+              <div className="lg:block hidden">
                 <p className="text-white font-semibold  text-[10px]">DATA</p>
               </div>
 
@@ -105,7 +105,7 @@ export default function DashboardCard({ className }: { className: string }) {
               <div className="lg:mb-2 mb-1">
                 <p className="text-white font-semibold lg:text-[10px] text-[8px]">ACCURACY SCORE</p>
               </div>
-              <div className="w-[90%] bg-[#726434] rounded-full lg:h-2 h-1 mb-1">
+              <div className="w-[90%] bg-[#726434] rounded-full lg:h-2 h-1 lg:mb-2 mb-1">
                 <div
                   className=" bg-gradient-to-b from-[#D8BD62] to-[#726434] lg:h-2 h-1 rounded-full"
                   style={{ width: `${bottomScore * 3}%` }}

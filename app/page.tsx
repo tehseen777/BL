@@ -14,7 +14,7 @@ import Newsletter from './components/newsletter'
 const page = () => {
   return (
     <div>
-      <Header />
+
       <main>
         <section>
           <Hero_section />
@@ -41,11 +41,8 @@ const page = () => {
           <section>
             <WhatsNew />
           </section>
-          <section>
-            <Newsletter />
-          </section>
+       
       </main>
-      <Footer />
     </div>
   )
 }

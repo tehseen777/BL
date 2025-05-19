@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Button from "./ui/button"
 
 export default function WhatsNew() {
   return (
@@ -13,11 +14,7 @@ export default function WhatsNew() {
           Understanding Of The Power Of Creativity And Technology.
         </p>
 
-        <div className=" flex justify-center items-center">   <button className='lg:text-sm text-[10px] text-black cursor-pointer lg:px-8 px-4 lg:py-3 py-2 rounded-full capitalize' style={{
-                backgroundImage: 'linear-gradient(to bottom, #D8BD62, #726434)',
-              }}>
-                explore more
-            </button>
+        <div className=" flex justify-center items-center"><Button text="explore more" className="lg:py-3"/>
         </div>
         </div>
         <div className="flex gap-4 mb-8 justify-center">
