@@ -9,16 +9,16 @@ const Header = () => {
         style={{
           backgroundImage: 'linear-gradient(to right, #866935, #CEA251)',
         }}>
-        Business <br className='lg:block hidden'/> lounge
+        <Link href={"/"}>Business <br className='lg:block hidden'/> lounge</Link>
       </div>
 
       {/* <div className="relative"> */}
       <div className="lg:flex gap-8 hidden items-center tracking-widest">
-        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent"><Link href="/">Solutions</Link></span>
-        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent"><Link href="/">Industries</Link></span>
-        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent "><Link href="/">our agents</Link></span>
-        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent "><Link href="/">pricing company</Link></span>
-        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent "><Link href="/">resources</Link></span>
+        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent"><Link href="/solutions">Solutions</Link></span>
+        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent"><Link href="/industries">Industries</Link></span>
+        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent "><Link href="pricing">pricing company</Link></span>
+        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent "><Link href="resources">resources</Link></span>
+        <span className="text-white uppercase font-sans text-[12px] hover:bg-gradient-to-r from-[#CEA251] to-[#685229] bg-clip-text hover:text-transparent "><Link href="/about">About</Link></span>
       </div>
 
       {/* Gradient bottom border */}

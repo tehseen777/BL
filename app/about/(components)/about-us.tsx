@@ -10,7 +10,7 @@ const AboutUs = () => {
     <div className='flex flex-col lg:gap-y-2 gap-y-0 justify-center items-center'>
     <p className='uppercase text-3xl text-[#CB8E1F] font-sans'>about us</p>
   <h2 className='lg:text-7xl text-2xl capitalize text-center leading-20  font-sans tracking-wide'>
-  We've Decoded the <br /> Science of Excellence.
+  We&apos;ve Decoded the <br /> Science of Excellence.
   </h2>
  
   </div>

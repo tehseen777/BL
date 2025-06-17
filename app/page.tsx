@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './components/header'
 import Hero_section from './components/hero_section'
 import Logo_slider from './components/logo_slider'
 import Perfomance from './components/perfomance'
@@ -9,8 +8,6 @@ import Steps from './components/steps'
 import Workflow from './components/workflow'
 import Reviews from './components/reviews'
 import WhatsNew from './components/whats_new'
-import Footer from './components/footer'
-import Newsletter from './components/newsletter'
 const page = () => {
   return (
     <div>

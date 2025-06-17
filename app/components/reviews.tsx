@@ -75,7 +75,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="bg-black lg:h-screen  text-white py-16 overflow-hidden">
+    <section className="bg-black lg:h-screen flex flex-col justify-center items-center  text-white py-16 overflow-hidden">
       <h2 className="text-3xl lg:text-6xl lg:font-semibold text-center mb-12">
         What Our Clients Says <br className='lg:hidden block' /> About Us
       </h2>

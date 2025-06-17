@@ -1,11 +1,10 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import { IoIosPlay } from "react-icons/io";
 
 export default function VideoSection() {
   const [isPlaying, setIsPlaying] = useState(false)
-  const [progress, setProgress] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   const handlePlayClick = () => {
@@ -16,14 +15,6 @@ export default function VideoSection() {
         videoRef.current.play()
       }
       setIsPlaying(!isPlaying)
-    }
-  }
-
-  const handleTimeUpdate = () => {
-    const video = videoRef.current
-    if (video && video.duration) {
-      const percent = (video.currentTime / video.duration) * 100
-      setProgress(percent)
     }
   }
 
@@ -38,7 +29,6 @@ export default function VideoSection() {
             poster="/about/video_poster.png"
             onPlay={() => setIsPlaying(true)}
             onPause={() => setIsPlaying(false)}
-            onTimeUpdate={handleTimeUpdate}
           >
             <source src="/about/video-1.mp4" type="video/mp4" />
             Your browser does not support the video tag.

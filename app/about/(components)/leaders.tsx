@@ -1,6 +1,5 @@
 import Button from "@/app/components/ui/button"
 import Image from "next/image"
-import Link from "next/link"
 
 export default function Leaders() {
   return (
@@ -10,7 +9,7 @@ export default function Leaders() {
         <div className="text-center mb-8">
           <h2 className="text-6xl font-sans transform scale-110 capitalize tracking-wide   mb-6">Our Leadership</h2>
    <p className='font-sans font-extralight lg:text-base text-xs capitalize tracking-wider mx-auto text-center lg:max-w-[900px] max-w-[300px]'>
-            Qp X Qs → MPO. It's An Equation We've Consistently Harnessed To Deliver Exceptional Results
+            Qp X Qs → MPO. It&apos;s An Equation We&apos;ve Consistently Harnessed To Deliver Exceptional Results
             <br />
             And Why 95% Of Our Clients Expand Our Scope Within The First 3 Months.
           </p>

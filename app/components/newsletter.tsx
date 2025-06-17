@@ -10,7 +10,7 @@ const Newsletter = () => {
         <h2 className='text-white font-semibold font-sans capitalize text-xl lg:text-[40px] mb-6 drop-shadow-sm'>
           Subscribe To Newsletter!
         </h2>
-        <div className='flex items-center border-2 border-white  rounded-full lg:px-2 px-1 justify-center gap-4 max-w-md mx-auto'>
+        <div className='flex items-center border-2 border-white  rounded-full lg:px-1 px-1 justify-center gap-4 max-w-md mx-auto'>
           <input
             type="email"
             placeholder="Enter Your Email"

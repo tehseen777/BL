@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { ChevronDown } from "lucide-react"
+import { FaChevronDown } from "react-icons/fa";
 
 export default function Steps() {
   const [openStep, setOpenStep] = useState(0)
@@ -25,7 +25,7 @@ export default function Steps() {
   return (
     <div className="bg-black text-white h-screen flex flex-col justify-center  gap-y-8 lg:py-10 py-16 lg:px-36 px-6">
       <div className="flex flex-col gap-y-3">
-        <h1 className="lg:text-4xl text-2xl text-center lg:text-left font-semibold tracking-wide  transform scale-y-110 font-sans">Launch In 5 Easy Steps</h1>
+        <h1 className="lg:text-4xl text-2xl text-center lg:text-left font-semibold tracking-wide  transform scale-y-110 font-sans capitalize">Launch In 5 Easy Steps</h1>
         <p className=" text-center lg:text-left mb-6 font-sans lg:text-sm text-xs font-extralight tracking-wide">
           We Source, Train, And Assemble Your New Team In As Little As 2 Weeks.
           <br className="lg:block hidden"/>
@@ -59,7 +59,7 @@ export default function Steps() {
                   className="flex justify-between items-center w-full p-4 text-left"
                 >
                   <span className="font-sans  tracking-wide">{step}</span>
-                  <ChevronDown
+                  <FaChevronDown 
                     className={`transition-transform cursor-pointer duration-200 ${openStep === index ? "transform rotate-180" : ""}`}
                   />
                 </button>
